@@ -1,0 +1,15 @@
+{
+  "name": "orbit-digital-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ORBIT — интерактивная студия цифровых экспериментов",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

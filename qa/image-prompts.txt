@@ -1,0 +1,20 @@
+ASSET 1
+Use case: stylized-concept
+Asset type: standalone raster landing page hero artwork for the ORBIT digital creative studio, wide landscape 1536x1024.
+Primary request: premium studio CGI sculpture of one interlocking inflated molten-chrome toroidal loop, a single organic angular knot with mirror-polished brushed metal and subtle acid yellow-green reflections.
+Scene/backdrop: pure nearly black #090b0a seamless flat background.
+Composition/framing: sculpture floats centrally, fills most of image with breathing space around every edge; bold diagonal sculptural silhouette, suitable for a 700x650 crop.
+Lighting/mood: controlled dramatic studio lighting and crisp metallic reflections, surreal premium industrial design.
+Materials/textures: smooth inflated chrome geometry with extremely fine brushed-metal detail, dark metallic reflections and slender silver-white specular ribbons, small tasteful acid lime accents.
+Constraints: only the sculpture and plain dark background. No text, logo, watermark, typography, interface elements, ground plane, background gradients or additional props.
+
+ASSET 2
+Use case: stylized-concept
+Asset type: standalone raster artwork for a creative studio work project card; landscape 1536x1024 image suitable for a 720x540 crop.
+Primary request: abstract flowing electric cobalt blue glass ribbon or folded sheet, sculptural conceptual generative design, with cyan highlights and fine linear striations.
+Scene/backdrop: very dark navy seamless background.
+Composition/framing: sculptural folded ribbon fills most of the landscape image with a strong flowing diagonal and rich dimensional folds, breathing space at edges.
+Lighting/mood: premium technology art with crisp glass edge light and luminous blue internal refraction.
+Color palette: electric cobalt blue, cyan highlights, almost-black navy.
+Materials/textures: translucent glossy glass-like ribbon with closely spaced delicate linear striations following every flowing bend.
+Constraints: no text, logo, watermark, interface elements, extra objects or decorative symbols.

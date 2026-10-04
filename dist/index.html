@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0c0b" />
+    <meta
+      name="description"
+      content="ORBIT — студия цифровых экспериментов. Дизайн, технологии и интерактивные миры за пределами привычного."
+    />
+    <title>ORBIT — за пределами привычного</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230a0c0b'/%3E%3Cg fill='none' stroke='%23d4fa69' stroke-width='4'%3E%3Cellipse cx='32' cy='32' rx='24' ry='11' transform='rotate(-40 32 32)'/%3E%3Ccircle cx='32' cy='32' r='18'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./digital-hero.css" />
+    <script src="./app.js" defer></script>
+    <script src="./digital-hero.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержимому</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="header">
+      <a class="brand" href="#" aria-label="ORBIT — на главную">
+        <svg
+          class="brand-mark"
+          viewBox="0 0 44 44"
+          fill="none"
+          aria-hidden="true"
+        >
+          <circle cx="22" cy="22" r="14" />
+          <ellipse
+            cx="22"
+            cy="22"
+            rx="22"
+            ry="8"
+            transform="rotate(-40 22 22)"
+          />
+        </svg>
+        <span>orbit<span class="brand-period">®</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="#about">Подход</a><a href="#work">Проекты</a
+        ><a href="#lab">Лаборатория <span class="nav-badge">LAB</span></a>
+      </nav>
+      <div class="header-actions">
+        <button
+          class="motion-button"
+          id="motion-toggle"
+          type="button"
+          aria-label="Приостановить анимацию"
+          aria-pressed="false"
+        >
+          <span class="motion-icon" aria-hidden="true"
+            ><i></i><i></i><i></i><i></i></span
+          ><span class="motion-label">Движение вкл.</span>
+        </button>
+        <a class="header-cta" href="#lab"
+          >Начать исследование <span aria-hidden="true">✳</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+      <nav
+        class="mobile-nav"
+        id="mobile-nav"
+        aria-label="Мобильная навигация"
+        inert
+      >
+        <a href="#about">Подход <span>01</span></a
+        ><a href="#work">Проекты <span>02</span></a
+        ><a href="#lab">Лаборатория <span>03</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section
+        class="digital-hero"
+        id="digital-hero"
+        aria-labelledby="digital-hero-title"
+      >
+        <canvas class="digital-hero__canvas" aria-hidden="true"></canvas>
+        <div class="digital-hero__topline">
+          <span class="digital-hero__signature"
+            ><span aria-hidden="true">✳</span> DIGITAL INTELLIGENCE</span
+          >
+          <span class="digital-hero__edition">ВООБРАЖЕНИЕ × ТЕХНОЛОГИИ</span>
+        </div>
+        <div class="digital-hero__content">
+          <p class="digital-hero__eyebrow">
+            <span></span> ИЗ ИДЕИ В НОВУЮ РЕАЛЬНОСТЬ
+          </p>
+          <div class="digital-hero__title-slot">
+            <h2 class="digital-hero__title" id="digital-hero-title">
+              Веб-Технологии
+            </h2>
+          </div>
+          <p class="digital-hero__description">
+            Мир меняется с каждой новой идеей.<br />Создавай то, что будет
+            дальше.
+          </p>
+          <div class="digital-hero__actions">
+            <a class="digital-hero__link" href="#orbit-intro"
+              >Исследовать сайт <span aria-hidden="true">+</span></a
+            >
+            <button class="digital-hero__replay" type="button" hidden>
+              <span aria-hidden="true">↻</span> Собрать заново
+            </button>
+          </div>
+        </div>
+        <div class="digital-hero__bottomline">
+          <div class="digital-hero__phases" aria-hidden="true">
+            <span data-phase="flow" class="is-active">01 / ПОТОК</span
+            ><span data-phase="assemble">02 / СБОРКА</span
+            ><span data-phase="hold">03 / ФОРМА</span
+            ><span data-phase="disperse">04 / РАСПАД</span>
+          </div>
+          <button
+            class="digital-hero__pause"
+            type="button"
+            aria-pressed="false"
+            hidden
+          >
+            <span class="digital-hero__pause-icon" aria-hidden="true">Ⅱ</span
+            ><span class="digital-hero__pause-label">Пауза</span>
+          </button>
+        </div>
+        <p class="digital-hero__hint" aria-hidden="true">
+          <span class="digital-hero__cursor"></span
+          ><span class="digital-hero__mouse-hint"
+            >Поток чувствует движение курсора</span
+          ><span class="digital-hero__touch-hint"
+            >Коснись, чтобы изменить поток</span
+          >
+        </p>
+      </section>
+
+      <section class="hero" id="orbit-intro" aria-labelledby="hero-title">
+        <div class="hero-topline">
+          <span class="eyebrow"
+            ><span class="tiny-cross">+</span> INDEPENDENT DIGITAL STUDIO</span
+          ><span class="hero-edition">DESIGN × TECHNOLOGY / 2026</span>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-two"></div>
+          <img
+            class="chrome-art"
+            src="./assets/chrome-orbit.webp"
+            width="1536"
+            height="1024"
+            alt=""
+            fetchpriority="high"
+          /><span class="art-coordinate coordinate-top"
+            >FIG. 001 — CHROME LOOP</span
+          ><span class="art-coordinate coordinate-bottom"
+            >55°45′ N &nbsp; 37°37′ E</span
+          ><span class="art-cross">+</span>
+        </div>
+        <div class="hero-copy">
+          <h1 id="hero-title">ВЫХОДИ<br /><span>ЗА РАМКИ.</span></h1>
+          <div class="hero-description">
+            <span class="small-asterisk" aria-hidden="true">✳</span>
+            <p>
+              На стыке дизайна и технологий<br />рождается то, чего ещё не было.
+            </p>
+          </div>
+          <a class="button button-lime" href="#lab"
+            >Исследовать возможности
+            <span class="button-symbol" aria-hidden="true">✳</span></a
+          >
+        </div>
+        <div class="hero-bottom">
+          <a class="scroll-cue" href="#about"
+            ><span class="scroll-line" aria-hidden="true"></span>Листай. Здесь
+            есть на что посмотреть.</a
+          ><span class="hero-note"
+            >НЕ ПРОСТО СМОТРЕТЬ.<br />ЧУВСТВОВАТЬ И ВЗАИМОДЕЙСТВОВАТЬ.</span
+          ><span class="hero-index">[ 01 — 04 ]</span>
+        </div>
+      </section>
+
+      <div class="ticker-window" aria-hidden="true">
+        <div class="ticker">
+          <div class="ticker-track">
+            <span>CREATIVE DEVELOPMENT</span><b>✳</b
+            ><span>DIGITAL EXPERIENCES</span><b>✳</b
+            ><span>BEYOND ORDINARY</span><b>✳</b><span>DESIGN IN MOTION</span
+            ><b>✳</b><span>CREATIVE DEVELOPMENT</span><b>✳</b
+            ><span>DIGITAL EXPERIENCES</span><b>✳</b
+            ><span>BEYOND ORDINARY</span><b>✳</b><span>DESIGN IN MOTION</span
+            ><b>✳</b>
+          </div>
+        </div>
+      </div>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="section-label reveal">
+          <span><span class="tiny-cross">+</span> ЗНАКОМЬСЯ, ORBIT</span
+          ><span>01 / ПОДХОД</span>
+        </div>
+        <div class="about-grid">
+          <div class="about-intro reveal">
+            <h2 id="about-title">
+              У хорошей идеи<br />нет <span class="serif-word">границ.</span>
+            </h2>
+            <p>
+              Мы исследуем, как код становится впечатлением. Соединяем точный
+              дизайн, живую графику и продуманное взаимодействие — чтобы
+              цифровое ощущалось настоящим.
+            </p>
+            <span class="mini-label">МЕНЬШЕ ШАБЛОНОВ. БОЛЬШЕ ХАРАКТЕРА.</span>
+          </div>
+          <div class="services">
+            <article class="service reveal">
+              <span class="service-number">01</span>
+              <div>
+                <h3>Дизайн с характером</h3>
+                <p>
+                  Выразительная типографика, смелые композиции и внимание к
+                  каждой детали.
+                </p>
+                <div class="tags">
+                  <span>ART DIRECTION</span><span>UI / UX</span>
+                </div>
+              </div>
+              <span class="service-symbol" aria-hidden="true">◉</span>
+            </article>
+            <article class="service reveal">
+              <span class="service-number">02</span>
+              <div>
+                <h3>Технологии в движении</h3>
+                <p>
+                  Интерактивная графика и анимация, которая помогает
+                  почувствовать интерфейс.
+                </p>
+                <div class="tags">
+                  <span>CREATIVE CODING</span><span>MOTION</span>
+                </div>
+              </div>
+              <span class="service-symbol" aria-hidden="true">✳</span>
+            </article>
+            <article class="service reveal">
+              <span class="service-number">03</span>
+              <div>
+                <h3>Опыт без трения</h3>
+                <p>
+                  Быстрый отклик, понятная навигация и свобода исследовать на
+                  любом экране.
+                </p>
+                <div class="tags">
+                  <span>DEVELOPMENT</span><span>PERFORMANCE</span>
+                </div>
+              </div>
+              <span class="service-symbol" aria-hidden="true">⌘</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work" id="work" aria-labelledby="work-title">
+        <div class="section-label reveal">
+          <span><span class="tiny-cross">+</span> ИЗБРАННЫЕ ЭКСПЕРИМЕНТЫ</span
+          ><span>02 / ПРОЕКТЫ</span>
+        </div>
+        <div class="section-heading reveal">
+          <h2 id="work-title">
+            От идеи —<br />до <span class="serif-word">ощущения.</span>
+          </h2>
+          <p>
+            Две концепции. Два разных настроения.<br />Один принцип: оставаться
+            в памяти.
+          </p>
+        </div>
+        <div class="project-grid">
+          <button
+            class="project-card reveal"
+            type="button"
+            data-project="flux"
+            aria-haspopup="dialog"
+          >
+            <span class="project-visual flux-visual"
+              ><img
+                src="./assets/blue-flux.webp"
+                width="1536"
+                height="1024"
+                alt="Скульптура из переливающегося синего стекла"
+                loading="lazy"
+                decoding="async"
+              /><span class="project-top"
+                ><span>EXPERIMENT / 001</span
+                ><span class="project-open" aria-hidden="true">+</span></span
+              ><span class="project-art-title">flux<span>®</span></span
+              ><span class="project-art-caption">A NEW STATE OF DIGITAL.</span
+              ><span class="project-view">Открыть концепцию</span></span
+            ><span class="project-info"
+              ><span
+                ><strong>Flux — форма перемен</strong
+                ><span>Визуальная идентичность / Digital art</span></span
+              ><span class="project-year">2026</span></span
+            >
+          </button>
+          <button
+            class="project-card reveal"
+            type="button"
+            data-project="signal"
+            aria-haspopup="dialog"
+          >
+            <span class="project-visual signal-visual"
+              ><canvas id="signal-preview" aria-hidden="true"></canvas
+              ><span class="project-top"
+                ><span>EXPERIMENT / 002</span
+                ><span class="project-open" aria-hidden="true">+</span></span
+              ><span class="signal-heading"
+                >SIGNAL<span>MAKE THE INVISIBLE VISIBLE</span></span
+              ><span class="signal-bottom"
+                >FREQUENCY &nbsp; 008.4 Hz <span>∿</span></span
+              ><span class="project-view">Открыть концепцию</span></span
+            ><span class="project-info"
+              ><span
+                ><strong>Signal — увидеть невидимое</strong
+                ><span>Генеративная графика / Взаимодействие</span></span
+              ><span class="project-year">2026</span></span
+            >
+          </button>
+        </div>
+      </section>
+
+      <section class="section lab" id="lab" aria-labelledby="lab-title">
+        <div class="section-label reveal">
+          <span><span class="tiny-cross">+</span> ТВОЯ ОЧЕРЕДЬ СОЗДАВАТЬ</span
+          ><span>03 / PLAYGROUND</span>
+        </div>
+        <div class="section-heading reveal">
+          <h2 id="lab-title">
+            Немного кода.<br />Много <span class="serif-word">магии.</span>
+          </h2>
+          <p>
+            Двигай курсор. Меняй правила.<br />Посмотри, как оживает математика.
+          </p>
+        </div>
+        <div class="playground reveal">
+          <div class="canvas-stage">
+            <canvas
+              id="particle-canvas"
+              role="img"
+              aria-label="Интерактивная трёхмерная сфера из частиц. Форма, цвет и скорость настраиваются в панели рядом."
+            ></canvas>
+            <div class="canvas-topline">
+              <span><span class="live-dot"></span> LIVE EXPERIMENT</span
+              ><span id="fps-counter" aria-label="Частота кадров">— FPS</span>
+            </div>
+            <span class="canvas-origin" aria-hidden="true">+</span>
+            <div class="canvas-bottomline">
+              <span id="canvas-caption">001 / СФЕРА</span
+              ><span>ДВИГАЙ КУРСОР ДЛЯ ВРАЩЕНИЯ</span>
+            </div>
+            <p class="canvas-fallback" hidden>
+              Этот браузер не поддерживает Canvas. Попробуй открыть сайт в
+              современном браузере.
+            </p>
+          </div>
+          <div class="lab-controls">
+            <div class="control-header">
+              <span class="eyebrow">ПУЛЬТ УПРАВЛЕНИЯ</span
+              ><span aria-hidden="true">⌘</span>
+            </div>
+            <fieldset class="shape-field">
+              <legend>Выбери форму</legend>
+              <div class="shape-options">
+                <button
+                  type="button"
+                  data-shape="sphere"
+                  class="shape-button active"
+                  aria-pressed="true"
+                >
+                  <span aria-hidden="true">◉</span>Сфера</button
+                ><button
+                  type="button"
+                  data-shape="wave"
+                  class="shape-button"
+                  aria-pressed="false"
+                >
+                  <span aria-hidden="true">∿</span>Волна</button
+                ><button
+                  type="button"
+                  data-shape="helix"
+                  class="shape-button"
+                  aria-pressed="false"
+                >
+                  <span aria-hidden="true">⌁</span>Спираль
+                </button>
+              </div>
+            </fieldset>
+            <div class="range-control">
+              <label for="speed"
+                >Скорость
+                <output for="speed" id="speed-value">1.0×</output></label
+              ><input
+                id="speed"
+                type="range"
+                min="0.2"
+                max="2"
+                step="0.1"
+                value="1"
+                aria-valuetext="1.0×"
+              />
+              <div class="range-labels">
+                <span>Медитативно</span><span>Энергично</span>
+              </div>
+            </div>
+            <fieldset class="color-field">
+              <legend>Цвет настроения</legend>
+              <div class="color-options">
+                <button
+                  type="button"
+                  class="color-swatch lime active"
+                  data-color="lime"
+                  aria-label="Лаймовый"
+                  aria-pressed="true"
+                ></button
+                ><button
+                  type="button"
+                  class="color-swatch blue"
+                  data-color="blue"
+                  aria-label="Голубой"
+                  aria-pressed="false"
+                ></button
+                ><button
+                  type="button"
+                  class="color-swatch violet"
+                  data-color="violet"
+                  aria-label="Фиолетовый"
+                  aria-pressed="false"
+                ></button
+                ><button
+                  type="button"
+                  class="color-swatch white"
+                  data-color="white"
+                  aria-label="Белый"
+                  aria-pressed="false"
+                ></button
+                ><span id="color-name">LIME</span>
+              </div>
+            </fieldset>
+            <button
+              class="pause-button"
+              id="lab-pause"
+              type="button"
+              aria-pressed="false"
+            >
+              <span id="pause-icon" aria-hidden="true">Ⅱ</span
+              ><span id="pause-label">Остановить мгновение</span>
+            </button>
+            <p class="lab-footnote">
+              Каждая точка — часть целого.<br />А что получится у тебя?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing section" aria-labelledby="closing-title">
+        <div class="section-label reveal">
+          <span><span class="tiny-cross">+</span> ПРОДОЛЖЕНИЕ СЛЕДУЕТ</span
+          ><span>04 / NEXT CHAPTER</span>
+        </div>
+        <div class="closing-content reveal">
+          <span class="closing-star" aria-hidden="true">✳</span>
+          <p class="eyebrow">ЛЮБОПЫТСТВО — ЛУЧШАЯ ОТПРАВНАЯ ТОЧКА</p>
+          <h2 id="closing-title">
+            Будущее начинается<br />с
+            <span class="serif-word">«а что, если?»</span>
+          </h2>
+          <a class="button button-lime" href="#lab"
+            >Создать свою орбиту
+            <span class="button-symbol" aria-hidden="true">✳</span></a
+          >
+        </div>
+        <div class="closing-wordmark" aria-hidden="true">
+          orbit<span>®</span>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>© <span id="year">2026</span> ORBIT STUDIO</p>
+      <span>СОЗДАНО ИЗ ЛЮБОПЫТСТВА</span
+      ><a href="#">Вернуться к началу <span aria-hidden="true">+</span></a>
+    </footer>
+
+    <dialog
+      class="project-dialog"
+      id="project-dialog"
+      aria-labelledby="dialog-title"
+    >
+      <button class="dialog-close" type="button" aria-label="Закрыть описание">
+        ×
+      </button>
+      <div class="dialog-art" id="dialog-art" aria-hidden="true"></div>
+      <div class="dialog-content">
+        <span class="eyebrow" id="dialog-eyebrow"></span>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-description"></p>
+        <dl class="dialog-details" id="dialog-details"></dl>
+        <button type="button" class="button button-lime" id="dialog-lab">
+          Попробовать в лаборатории <span aria-hidden="true">✳</span>
+        </button>
+      </div>
+    </dialog>
+    <noscript
+      ><div class="noscript-message">
+        Включи JavaScript, чтобы поиграть с частицами в лаборатории. Остальная
+        страница доступна без него.
+      </div></noscript
+    >
+  </body>
+</html>
