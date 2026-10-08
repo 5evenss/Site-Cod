@@ -69,23 +69,6 @@ const CONFIG = {
 
 Скопируй папку `website` целиком или скачай её из своего репозитория. Открой `dist/index.html` — сайт готов к показу даже без интернета. Для локального HTTP-сервера выполни ту же команду Node.js.
 
-## Отдельный репозиторий GitHub — рекомендуемый вариант
-
-Текущая папка находится внутри существующего проекта Spirit Swarm. Чтобы загрузить **только сайт**, сначала скопируй содержимое `website` в новую папку **за пределами Spirit Swarm**, например `D:\Projects\orbit-site`. В корне новой папки должны лежать `dist`, `scripts`, `package.json` и `.github`.
-
-Создай пустой репозиторий на GitHub. В новой папке:
-
-```powershell
-git init
-git add .
-git commit -m "Create ORBIT interactive website"
-git branch -M main
-git remote add origin https://github.com/YOUR_NAME/YOUR_REPO.git
-git push -u origin main
-```
-
-Вместо `YOUR_NAME` и `YOUR_REPO` подставь имя пользователя и название репозитория. Git может один раз попросить настроить имя и email автора коммитов.
-
 ### Публичная ссылка через GitHub Pages
 
 Готовый workflow находится в `.github/workflows/pages.yml`.
